@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {sendTS, tryMethodDecorator, tryPropsDecorator} from 'insta-email';
 
-function App() {
+class App extends React.Component {
+
+  @tryPropsDecorator()
+  state = {
+    first:'Devlin',
+    last: 'Duldulao'
+  };
+
+  @tryMethodDecorator()
+  sendEmail() {
+    sendTS({mailto:'webmasterdevlin@gmail.com',body:"Hello",subject:"Hey sexy!"});
+  }
+
+
+  componentDidMount() {
+    let me = this.state.first;
+    console.log('me::', me);
+    this.sendEmail();
+  }
+
+public render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h1>Hello</h1>
   );
+}
 }
 
 export default App;

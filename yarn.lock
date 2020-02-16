@@ -5022,6 +5022,11 @@ inquirer@7.0.4, inquirer@^7.0.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
+insta-email@^1.0.37:
+  version "1.0.37"
+  resolved "https://registry.yarnpkg.com/insta-email/-/insta-email-1.0.37.tgz#c2b0541cea189fd92f9827d546a3e038fd44735f"
+  integrity sha512-NzfEmpiVz5SIKw71u0iprZCKRj5vlaq5pMXtJsvz8V+W6mFXQ2Xlnemt9YaCM/KWHuArbmHXPEp9x46HlanYFQ==
+
 internal-ip@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/internal-ip/-/internal-ip-4.3.0.tgz#845452baad9d2ca3b69c635a137acb9a0dad0907"
