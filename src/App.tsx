@@ -1,8 +1,8 @@
-import React from "react";
+import { Component } from "react";
 import "./App.css";
 import { sendTS, tryMethodDecorator, tryPropsDecorator } from "insta-email";
 
-class App extends React.Component {
+class App extends Component {
   @tryPropsDecorator()
   state = {
     first: "Devlin",
@@ -10,7 +10,7 @@ class App extends React.Component {
   };
 
   @tryMethodDecorator()
-  sendEmail() {
+  sendEmail(): void {
     sendTS({
       mailto: "webmasterdevlin@gmail.com",
       body: "Hello",
@@ -19,12 +19,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let me = this.state.first;
+    const me = this.state.first;
     console.log("me::", me);
     this.sendEmail();
   }
 
-  public render() {
+  render() {
     return <h1>Hello</h1>;
   }
 }
