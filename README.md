@@ -1,3 +1,9 @@
+# Using decorators TypeScript workshop
+
+## Required
+
+- nodejs run time from nodejs.org
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
